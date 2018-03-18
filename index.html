@@ -1,0 +1,94 @@
+Developing Solutions nowadays has been always about Integration. Microsoft Dynamics 365 may have one name but in reality these are difference solutions that need to be integrated together. Fortunately however, Dynamics NAV and Dynamics 365 Business Central (<em>formerly Dynamics 365 for Finance and Operations, Business edition</em>) expose an API that makes it possible to integrate with other services. To enable integration with these APIs, for Dynamics NAV you must go through a few steps to enable the access first. For more information about these steps, see <a href="https://docs.microsoft.com/en-us/dynamics-nav/enabling-apis-for-dynamics-nav" data-linktype="relative-path">Enabling APIs for Microsoft Dynamics NAV</a>.
+<p class="lf-text-block lf-block" data-lf-anchor-id="c761af88d3bb75b1136b9fa361654e2b:0">Once the API access has been enabled, you can write code that integrates your web service or SaaS solution with Dynamics NAV or Dynamics 365 Business Central. Creating your integration through an API provides simple access to the supported functionality in a single endpoint, giving you a simplified experience for creating a single app with integrations across multiple Microsoft products.</p>
+
+<table width="1015">
+<tbody>
+<tr>
+<td><strong> </strong></td>
+<td colspan="3">Dynamics 365
+Finance and Operations,
+Business edition (online)</td>
+<td>Microsoft Dynamics
+NAV 2018 (on-prem)</td>
+</tr>
+<tr>
+<td><strong>Means of connection</strong></td>
+<td><strong>Microsoft Graph (coming)</strong></td>
+<td><strong>Common endpoint service</strong></td>
+<td><strong>Direct tenant</strong></td>
+<td><strong>Direct installation</strong></td>
+</tr>
+<tr>
+<td><strong>Usage</strong></td>
+<td>Production</td>
+<td>Production</td>
+<td>Rapid development and testing only</td>
+<td>Production</td>
+</tr>
+<tr>
+<td><strong>Endpoint</strong></td>
+<td>https://
+graph.microsoft.com
+/financials/beta/</td>
+<td>https://
+api.financials.dynamics.com</td>
+<td>https://
+<tenant url>:7048/MS/api/<API version>/
+Example: https://
+contoso.com:7048/api/beta</td>
+<td>OData base URL in installation:
+https://
+<base URL>:<port>/v1.0/api/<API version>/
+Example: https://
+nav.contoso.com:7048
+/v1.0/api/beta/
+Must be exposed through a firewall.</td>
+</tr>
+<tr>
+<td><strong>Availability</strong></td>
+<td>Always enabled</td>
+<td>Always enabled</td>
+<td>Always enabled</td>
+<td>Disabled by default.
+Must be enabled by the administrator.</td>
+</tr>
+<tr>
+<td><strong>Authentication</strong></td>
+<td>Azure Active Directory
+(AAD)</td>
+<td>Azure Active Directory
+(AAD)</td>
+<td>Basic authentication.
+Username and <a href="https://docs.microsoft.com/en-us/dynamics-nav/developer/devenv-develop-connect-apps-for-fin">web service
+access key</a> as password.</td>
+<td>Basic authentication.
+Username and <a href="https://docs.microsoft.com/en-us/dynamics-nav/developer/devenv-develop-connect-apps-for-fin">web service
+access key</a> as password.</td>
+</tr>
+<tr>
+<td><strong>API/Data access</strong></td>
+<td>Based on user's
+<a href="https://docs.microsoft.com/en-us/dynamics-nav/permissions-on-database-objects">permissions</a></td>
+<td>Based on user's
+<a href="https://docs.microsoft.com/en-us/dynamics-nav/permissions-on-database-objects">permissions</a></td>
+<td>Based on user's
+<a href="https://docs.microsoft.com/en-us/dynamics-nav/permissions-on-database-objects">permissions</a></td>
+<td>Based on user's
+<a href="https://docs.microsoft.com/en-us/dynamics-nav/permissions-on-database-objects">permissions</a></td>
+</tr>
+<tr>
+<td><strong>API update cycle</strong></td>
+<td>Monthly</td>
+<td>Monthly</td>
+<td>Monthly</td>
+<td>Hotfixes installed by partner</td>
+</tr>
+<tr>
+<td><strong>Development instance</strong></td>
+<td>Sign up for a <a href="https://go.microsoft.com/fwlink/?linkid=847861">tenant</a></td>
+<td>Sign up for a <a href="https://go.microsoft.com/fwlink/?linkid=847861">tenant</a></td>
+<td>Sign up for a <a href="https://go.microsoft.com/fwlink/?linkid=847861">tenant</a></td>
+<td>Get <a href="https://aka.ms/navdeveloperpreview">Docker</a> instance</td>
+</tr>
+</tbody>
+</table>
